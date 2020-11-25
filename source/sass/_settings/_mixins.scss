@@ -1,0 +1,51 @@
+@mixin h1() {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: normal;
+  letter-spacing: 0.01em;
+}
+
+@mixin h2() {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@mixin bg-overlay() {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(to right, #09052f, #311d5e);
+    opacity: 0.85;
+  }
+}
+
+@mixin button-default() {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $accent-color;
+  font-family: 'Hammersmith One', sans-serif;
+  border: 1px solid $accent-color;
+  border-radius: 2px;
+  padding: 8px 14px;
+  background-color: transparent;
+  transition: 0.3s color, 0.3s border-color;
+
+  &:hover {
+    color: $text-color;
+    border-color: $text-color;
+  }
+}

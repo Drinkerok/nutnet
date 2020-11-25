@@ -1,0 +1,18 @@
+section.letter
+  .container
+    h2.letter__header Give us a good news
+    form.letter-form(action="#", method="POST")
+      .letter-form__item
+        label.visually-hidden(for="letter-name") Name
+        input.letter-form__input#letter-name(placeholder="Name", name="name")
+      .letter-form__item
+        label.visually-hidden(for="letter-email") Name
+        input.letter-form__input#letter-email(placeholder="Email", name="email", type="email")
+      .letter-form__item
+        label.visually-hidden(for="letter-subject") Subject
+        input.letter-form__input#letter-subject(placeholder="Subject", name="subject")
+      .letter-form__item
+        label.visually-hidden(for="letter-message") Your message
+        textarea.letter-form__textarea#letter-message(placeholder="Your message", name="message")
+      .letter-form__item
+        button.letter-form__submit Submit

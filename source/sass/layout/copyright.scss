@@ -1,0 +1,10 @@
+.copyright {
+  margin: 0;
+  line-height: 26px;
+  letter-spacing: 0.025em;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
+}

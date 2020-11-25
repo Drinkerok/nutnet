@@ -1,0 +1,46 @@
+.video {
+  @include bg-overlay();
+
+  padding: 101px 0;
+  color: #ffffff;
+  background-image: url('./../img/bg_video.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet) {
+    padding: 202px 0 196px;
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.video__link {
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 130px 0 0;
+  position: relative;
+  transition: 0.3s color;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &::before {
+    content: '';
+    background-image: url($sprite);
+    background-position: 0 0;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

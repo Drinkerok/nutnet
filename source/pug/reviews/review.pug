@@ -1,0 +1,6 @@
+mixin review(data)
+  blockquote.review(data-img=data.img)
+    p= data.text
+    cite.review__author
+      span.review__author-name= data.author_name
+      span.review__author-position= data.author_position

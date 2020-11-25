@@ -1,0 +1,38 @@
+include ./person
+include ./../_mixins/link
+
+-
+  var team = [
+    {
+      name: 'Semf Ucuk',
+      position: 'CEO & Founder'
+    },
+    {
+      name: 'Dik Adalin',
+      position: 'Engeneering'
+    },
+    {
+      name: 'Jeng Kol',
+      position: 'Designer'
+    },
+    {
+      name: 'Pet Romak',
+      position: 'Marketing'
+    }
+  ]
+
+section.team#team
+  .container
+    .team__head
+      h2.team__header Meet our amazing team
+      p.team__description Lorem ipsum dolor sit amet proin gravida nibh vel velit
+
+    ul.team__list
+      each person in team
+        li.team__item
+          +person(person)
+
+    .team__join
+      p Become part of our dream team, let’s join us !
+      .team__join-link
+        +link("#", "We are hiring")

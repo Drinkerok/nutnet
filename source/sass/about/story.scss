@@ -1,0 +1,48 @@
+.story {
+  padding: 63px 0 70px;
+
+  & > .container {
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+
+      &::before {
+        content: '';
+        width: calc(100% * 5 / 12);
+        margin: 0 9px 0 0;
+        flex-shrink: 0;
+        background-image: url('./../img/decoration_story.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+      }
+    }
+  }
+}
+
+.story__content {
+  flex-grow: 1;
+}
+
+.story__header {
+  @include h2();
+
+  margin: 0 0 18px;
+}
+
+.story__description {
+  p {
+    opacity: 0.75;
+    margin: 0;
+    letter-spacing: 0.03em;
+
+    & + p {
+      margin-top: 22px;
+    }
+  }
+}
+
+.story__link {
+  margin: 27px 0 0;
+  display: flex;
+  justify-content: flex-start;
+}

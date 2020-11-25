@@ -1,0 +1,88 @@
+.expertise-direction {
+  padding: 112px 20px 35px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url($sprite);
+  }
+
+  &--web {
+    &::before {
+      background-position: -100px -50px;
+      width: 49px;
+      height: 50px;
+      top: 32px;
+    }
+  }
+
+  &--brand {
+    &::before {
+      background-position: -50px -100px;
+      width: 50px;
+      height: 42px;
+      top: 36px;
+    }
+  }
+
+  &--app {
+    &::before {
+      background-position: -150px -50px;
+      width: 28px;
+      height: 50px;
+      top: 32px;
+    }
+  }
+
+  &--seo {
+    &::before {
+      background-position: -100px 0;
+      width: 50px;
+      height: 50px;
+      top: 39px;
+    }
+  }
+
+  &--game {
+    &::before {
+      background-position: -150px 0;
+      width: 41px;
+      height: 50px;
+      top: 39px;
+    }
+  }
+
+  &--love {
+    &::before {
+      background-position: 0 -100px;
+      width: 50px;
+      height: 46px;
+      top: 41px;
+    }
+  }
+}
+
+.expertise-direction__name {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 14px;
+}
+
+.expertise-direction__description {
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  margin: auto 0 0;
+
+  & + & {
+    margin-top: 22px;
+  }
+}

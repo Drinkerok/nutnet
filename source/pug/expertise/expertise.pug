@@ -1,0 +1,45 @@
+include ./expertise-direction
+
+-
+  var items = [
+    {
+      type: "expertise-direction--web",
+      name: "Web design & development",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    },
+    {
+      type: "expertise-direction--brand",
+      name: "Branding identity",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    },
+    {
+      type: "expertise-direction--app",
+      name: "Mobile app",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    },
+    {
+      type: "expertise-direction--seo",
+      name: "Search engine optimisation",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    },
+    {
+      type: "expertise-direction--game",
+      name: "Game development",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    },
+    {
+      type: "expertise-direction--love",
+      name: "Made with love",
+      description: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean."
+    }
+  ]
+
+section.expertise#expertise
+  .container
+    .expertise__head
+      h2.expertise__header Expertise
+      p.expertise__description Lorem ipsum dolor sit amet proin gravida nibh vel velit
+    ul.expertise__list
+      each item in items
+        li.expertise__item
+          +expertise-direction(item)

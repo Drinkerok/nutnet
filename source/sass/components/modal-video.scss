@@ -1,0 +1,16 @@
+.modal-video {
+  max-width: 100%;
+
+  &:not(&--loaded) {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: 'Loading...';
+    }
+  }
+}

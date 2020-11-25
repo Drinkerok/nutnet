@@ -1,0 +1,59 @@
+.page-footer {
+  @include bg-overlay();
+
+  background-image: url('./../img/bg_footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 70px 0 63px;
+
+  .container {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 37px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'company company'
+        'contacts social'
+        'navigation copyright';
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        'company contacts social'
+        'navigation navigation copyright';
+    }
+  }
+}
+
+.page-footer__company {
+  grid-area: company;
+
+  p {
+    line-height: 26px;
+    letter-spacing: 0.025em;
+    margin: 21px 0 0;
+  }
+}
+
+.page-footer__contacts {
+  grid-area: contacts;
+}
+
+.page-footer__social {
+  grid-area: social;
+
+  @media (min-width: $tablet) {
+    padding: 0 0 0 9px;
+  }
+}
+
+.page-footer__navigation {
+  grid-area: navigation;
+}
+
+.page-footer__copyright {
+  grid-area: copyright;
+}

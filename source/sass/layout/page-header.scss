@@ -1,0 +1,27 @@
+.page-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  padding: 16px 0;
+
+  @media (max-width: $tablet - 1px) {
+    &--menu-open {
+      @include bg-overlay();
+
+      position: absolute;
+      z-index: 51;
+    }
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  flex-shrink: 0;
+}

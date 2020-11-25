@@ -1,0 +1,49 @@
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.subscribe__input {
+  flex-grow: 1;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(#ffffff, 0.5);
+  border-radius: 0;
+  padding: 12px 16px 9px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.75;
+  }
+}
+
+.subscribe__submit {
+  flex-shrink: 0;
+  background-color: rgba(#ffffff, 0.5);
+  border: none;
+  padding: 0;
+  margin: 0 0 0 10px;
+  width: 70px;
+  position: relative;
+  transition: 0.3s background-color;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url($sprite);
+    background-position: -150px -100px;
+    width: 25px;
+    height: 25px;
+  }
+}

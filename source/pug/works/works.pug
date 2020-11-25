@@ -1,0 +1,78 @@
+include ./work
+include ./../_mixins/link
+
+-
+  var works = [
+    {
+      name: "work_1",
+      link: "#",
+      img: "/img/work_1.jpg"
+    },
+    {
+      name: "work_2",
+      link: "#",
+      img: "/img/work_2.jpg"
+    },
+    {
+      name: "work_3",
+      link: "#",
+      img: "/img/work_3.jpg"
+    },
+    {
+      name: "work_4",
+      link: "#",
+      img: "/img/work_4.jpg"
+    },
+    {
+      name: "work_5",
+      link: "#",
+      img: "/img/work_2.jpg"
+    },
+    {
+      name: "work_6",
+      link: "#",
+      img: "/img/work_3.jpg"
+    },
+    {
+      name: "work_7",
+      link: "#",
+      img: "/img/work_3.jpg"
+    },
+    {
+      name: "work_8",
+      link: "#",
+      img: "/img/work_1.jpg"
+    },
+    {
+      name: "work_9",
+      link: "#",
+      img: "/img/work_4.jpg"
+    },
+    {
+      name: "work_10",
+      link: "#",
+      img: "/img/work_3.jpg"
+    },
+    {
+      name: "work_11",
+      link: "#",
+      img: "/img/work_4.jpg"
+    },
+    {
+      name: "work_12",
+      link: "#",
+      img: "/img/work_1.jpg"
+    }
+  ]
+
+section.works#works
+  .container
+    .works__head
+      h2.works__header Our works
+      .works__all-link
+        a(href="#", target="_blank") See All Project in dribbble
+  ul.works__list
+    each work in works
+      li.works__item
+        +work(work)
+  button.works__load-more Load more

@@ -1,0 +1,37 @@
+-
+  var links = [
+    {
+      src: "#home",
+      name: "Home"
+    },
+    {
+      src: "#about",
+      name: "About"
+    },
+    {
+      src: "#expertise",
+      name: "Expertise"
+    },
+    {
+      src: "#team",
+      name: "Teams"
+    },
+    {
+      src: "#works",
+      name: "Works"
+    },
+    {
+      src: "#reviews",
+      name: "People Say"
+    },
+    {
+      src: "#contacts",
+      name: "Contact"
+    }
+  ]
+
+nav.main-navigation
+  ul.main-navigation__list
+    each link, index in links
+      li.main-navigation__item
+        a.main-navigation__link(href=link.src, class=index == 0 ? "main-navigation__link--active" : "")= link.name

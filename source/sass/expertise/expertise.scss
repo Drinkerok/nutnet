@@ -1,0 +1,80 @@
+.expertise {
+  padding: 63px 0 69px;
+}
+
+.expertise__head {
+  padding: 0 0 19px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: rgba($text-color, 0.3);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.expertise__header {
+  @include h2();
+
+  text-align: center;
+  margin: 0 0 7px;
+}
+
+.expertise__description {
+  margin: 0 0 0;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.075em;
+  text-align: center;
+
+  & + & {
+    margin-top: 19px;
+  }
+}
+
+.expertise__list {
+  list-style: none;
+  padding: 0;
+  margin: 48px 0 0;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+}
+
+.expertise__item {
+  @media (max-width: $tablet - 1px) {
+    border-top: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    border-top: none;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    width: 33.333333%;
+    flex-shrink: 0;
+
+    @for $i from 1 through 3 {
+      &:nth-child(3n) {
+        border-right: none;
+      }
+
+      &:nth-last-child(#{$i}) {
+        border-bottom: none;
+      }
+    }
+  }
+}

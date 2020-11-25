@@ -1,0 +1,43 @@
+include ./review
+
+-
+  var reviews = [
+    {
+      text: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+      author_name: "Jane Galadriel",
+      author_position: "CEO Tengkurep",
+      img: "/img/author_1.png"
+    },
+    {
+      text: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+      author_name: "Jane Galadriel",
+      author_position: "CEO Tengkurep",
+      img: "/img/author_2.png"
+    },
+    {
+      text: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+      author_name: "Jane Galadriel",
+      author_position: "CEO Tengkurep",
+      img: "/img/author_3.png"
+    },
+    {
+      text: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+      author_name: "Jane Galadriel",
+      author_position: "CEO Tengkurep",
+      img: "/img/author_4.png"
+    },
+    {
+      text: "This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+      author_name: "Jane Galadriel",
+      author_position: "CEO Tengkurep",
+      img: "/img/author_5.png"
+    }
+  ]
+
+section.reviews#reviews
+  .container
+    h2.visually-hidden Reviews
+    ul.reviews__list
+      each review in reviews
+        li.reviews__item
+          +review(review)

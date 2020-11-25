@@ -1,0 +1,10 @@
+.letter {
+  padding: 63px 0 68px;
+}
+
+.letter__header {
+  @include h2();
+
+  text-align: center;
+  margin: 0 0 29px;
+}
